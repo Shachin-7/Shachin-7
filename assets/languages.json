@@ -1,11 +1,11 @@
 {
-  "title": "Language Mix",
+  "title": "Shachin-7 · language mix",
   "axes": [
     { "label": "Python", "value": 80 },
     { "label": "HTML", "value": 80 },
     { "label": "CSS", "value": 80 },
     { "label": "TypeScript", "value": 60 },
     { "label": "JavaScript", "value": 75 },
-    { "label": "C / C++", "value": 65 }
+    { "label": "C", "value": 65 }
   ]
 }
