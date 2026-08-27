@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "assets/skills.json"
+      - "assets/languages.json"
       - "assets/projects.json"
       - "scripts/radar.py"
       - "scripts/cards.py"
@@ -30,16 +31,9 @@ jobs:
       - name: Skill radar
         run: python scripts/radar.py --data assets/skills.json -o assets/radar
 
-      # Live radar built from real language byte counts across your repos
+      # Language radar (customized levels: Python 80, HTML 80, CSS 80, TypeScript 60)
       - name: Language radar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/radar.py \
-            --github "${{ github.repository_owner }}" \
-            -o assets/radar-langs \
-            --limit 7 --values --curve 0.4 \
-            --exclude "shell,makefile,dockerfile,batchfile,procfile"
+        run: python scripts/radar.py --data assets/languages.json -o assets/radar-langs
 
       # Self-hosted stat and repo cards
       - name: Stat and repo cards
