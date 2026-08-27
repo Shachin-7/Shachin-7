@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "repo": "OrbitXOS",
+      "description": "Real-time space safety platform tracking 23,000+ objects with collision trajectory prediction."
+    },
+    {
+      "repo": "Shachin-portfolio",
+      "description": "Full-stack AI developer portfolio featuring Three.js WebGL shaders and Gemini AI Assistant."
+    },
+    {
+      "repo": "Satellite_error_github",
+      "description": "Hybrid LSTM + Transformer + GAN framework reducing ephemeris/clock error by 35%."
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 <div align="center">
 
-<!-- PORTRAIT - animated dot matrix generated from SHA.jpg -->
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/images/sha_matrix.svg?v=3" width="340" alt="Shachin VP, rendered as a dot matrix portrait">
+<!-- PORTRAIT - generated from SHA.jpg via dotify, row-reveal animation on load -->
+<img src="assets/portrait.svg" width="300" alt="Shachin VP, rendered as a dot matrix">
 
-<br/><br/>
+<br>
 
 <!-- NAME / TAGLINE - animated typing banner -->
 <a href="https://github.com/Shachin-7">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=39D353&center=true&vCenter=true&width=600&lines=Shachin+VP;AI+Engineer+%26+5x+Hackathon+Champion;Deep+Learning+Architect;01100011+01101111+01100100+01100101" alt="typing banner">
 </a>
 
-<br/><br/>
+<br>
 
 <!-- SOCIALS -->
 <a href="https://www.linkedin.com/in/shachin-vp-859b26298"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -18,8 +18,6 @@
 <a href="https://shachin.pro"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
 <a href="https://drive.google.com/file/d/1ry_brnD_3fJJmNwaQxbxhxV0TdmR4Gro/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-FF6B00?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume"></a>
 <a href="https://github.com/Shachin-7"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
-
-<br/><br/>
 
 <img src="https://komarev.com/ghpvc/?username=Shachin-7&style=flat&color=39d353&label=profile+views" alt="profile views">
 
@@ -62,12 +60,22 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 <tr>
 <td width="50%" align="center" valign="middle">
 
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/radar-dark.svg" width="400" alt="skill radar chart">
+<!-- Self-rated radar - edit assets/skills.json, the workflow redraws it -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg">
+  <img src="assets/radar-dark.svg" width="400" alt="skill radar chart">
+</picture>
 
 </td>
 <td width="50%" align="center" valign="middle">
 
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/radar-langs-dark.svg" width="400" alt="language radar chart">
+<!-- Live radar built from real language byte counts across your repos -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg">
+  <img src="assets/radar-langs-dark.svg" width="400" alt="language radar chart">
+</picture>
 
 </td>
 </tr>
@@ -81,10 +89,12 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 ## `~/` contribution calendar
 
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/metrics.isocalendar.svg" width="90%" alt="3D isometric contribution calendar">
+<!-- 3D isometric calendar, regenerated every 6h by .github/workflows/metrics.yml -->
+<img src="assets/metrics.isocalendar.svg" width="90%" alt="3D isometric contribution calendar">
 
-<br/><br/>
+<br><br>
 
+<!-- Snake eats the contribution graph - .github/workflows/snake.yml -->
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake.svg">
@@ -99,15 +109,19 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 ## `~/` the numbers
 
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/card-stats-dark.svg" width="480" alt="GitHub statistics">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg">
+  <img src="assets/card-stats-dark.svg" width="480" alt="GitHub statistics">
+</picture>
 
-<br/><br/>
+<br>
 
-<img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/metrics.languages.svg" height="165" alt="most used languages">
+<img src="assets/metrics.languages.svg" height="165" alt="most used languages">
 
-<br/><br/>
+<br><br>
 
-<img src="https://github-profile-trophy.vercel.app/?username=Shachin-7&theme=algolia&no-frame=true&no-background=true&column=6" width="90%" alt="trophies">
+<img src="assets/metrics.achievements.svg" width="90%" alt="achievements">
 
 </div>
 
@@ -121,21 +135,33 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 <tr>
 <td width="50%">
   <a href="https://github.com/Shachin-7/Shachin-portfolio">
-    <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/card-Shachin-portfolio-dark.svg" width="420" alt="Shachin-portfolio">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Shachin-portfolio-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/card-Shachin-portfolio-light.svg">
+      <img src="assets/card-Shachin-portfolio-dark.svg" width="420" alt="Shachin-portfolio">
+    </picture>
   </a>
 </td>
 <td width="50%">
   <a href="https://github.com/Shachin-7/Satellite_error_github">
-    <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/assets/card-Satellite_error_github-dark.svg" width="420" alt="Satellite_error_github">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Satellite_error_github-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/card-Satellite_error_github-light.svg">
+      <img src="assets/card-Satellite_error_github-dark.svg" width="420" alt="Satellite_error_github">
+    </picture>
   </a>
 </td>
 </tr>
 </table>
 
+<sub>
+
 | project | live | stack |
 |---|---|---|
 | **[Shachin Portfolio](https://github.com/Shachin-7/Shachin-portfolio)** | [shachin.pro](https://shachin.pro) | `Next.js` `React` `Three.js` `Gemini AI` |
 | **[Satellite Error](https://github.com/Shachin-7/Satellite_error_github)** | — | `Python` `LSTM` `Transformer` `GAN` |
+
+</sub>
 
 </div>
 
@@ -143,6 +169,6 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 <div align="center">
 
-<sub><code>01110100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110011 01100011 01110010 01101111 01101100 01101100 01101001 01101110 01100111</code></sub>
+<sub>`01110100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110011 01100011 01110010 01101111 01101100 01101100 01101001 01101110 01100111`</sub>
 
 </div>

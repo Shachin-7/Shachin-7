@@ -1,0 +1,12 @@
+{
+  "title": "Skill Radar",
+  "axes": [
+    { "label": "JavaScript", "value": 85 },
+    { "label": "TypeScript", "value": 82 },
+    { "label": "React", "value": 85 },
+    { "label": "Node / API", "value": 78 },
+    { "label": "Databases", "value": 75 },
+    { "label": "Python", "value": 92 },
+    { "label": "DSA", "value": 80 }
+  ]
+}
