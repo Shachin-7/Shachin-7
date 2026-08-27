@@ -1,13 +1,9 @@
 <div align="center">
 
-  <!-- HERO HALFTONE PORTRAIT IMAGE -->
-  <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/images/github_hero_matrix.png" alt="Shachin VP" width="380" style="border-radius: 16px;" />
+  <!-- ANIMATED DOT-MATRIX PORTRAIT WITH CYCLING TEXT -->
+  <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/images/sha_matrix.svg" alt="Shachin VP Dot Matrix Portrait" width="440" />
 
   <br/><br/>
-
-  <!-- CYBERPUNK TITLE -->
-  <h1><code style="color: #22c55e;">Shachin VP</code></h1>
-  <p><strong>AI Engineer | 5x Hackathon Champion | Deep Learning Architect</strong></p>
 
   <!-- BADGES -->
   <p>
@@ -40,3 +36,4 @@
 
 ```bash
 $ cat about.txt
+
