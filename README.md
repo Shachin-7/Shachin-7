@@ -36,4 +36,3 @@
 
 ```bash
 $ cat about.txt
-
