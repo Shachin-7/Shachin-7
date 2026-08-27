@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- PORTRAIT - animated dot matrix generated from SHA.jpg (cache-busted with ?v=2) -->
+<!-- PORTRAIT - animated dot matrix generated from SHA.jpg -->
 <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-portfolio/main/public/images/sha_matrix.svg?v=2" width="340" alt="Shachin VP, rendered as a dot matrix portrait">
 
 <br/><br/>
