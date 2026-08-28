@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- PORTRAIT - True color dot matrix generated from Adobe Express file 7 -->
-<img src="assets/portrait.svg?v=5" width="320" alt="Shachin VP True Color Dot Matrix Portrait">
+<img src="assets/portrait.svg?v=6" width="320" alt="Shachin VP True Color Dot Matrix Portrait">
 
 <br>
 
@@ -62,9 +62,9 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 <!-- Self-rated radar - edit assets/skills.json -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg?v=5">
-  <img src="assets/radar-dark.svg?v=5" width="400" alt="skill radar chart">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-light.svg?v=6">
+  <img src="assets/radar-dark.svg?v=6" width="400" alt="skill radar chart">
 </picture>
 
 </td>
@@ -72,9 +72,9 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 <!-- Language mix radar with customized scores -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg?v=5">
-  <img src="assets/radar-langs-dark.svg?v=5" width="400" alt="language radar chart">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/radar-langs-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/radar-langs-light.svg?v=6">
+  <img src="assets/radar-langs-dark.svg?v=6" width="400" alt="language radar chart">
 </picture>
 
 </td>
@@ -90,15 +90,15 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 ## `~/` contribution calendar
 
 <!-- 3D isometric calendar, regenerated every 6h by .github/workflows/metrics.yml -->
-<img src="assets/metrics.isocalendar.svg?v=5" width="90%" alt="3D isometric contribution calendar">
+<img src="assets/metrics.isocalendar.svg?v=6" width="90%" alt="3D isometric contribution calendar">
 
 <br><br>
 
 <!-- Snake eats the contribution graph - .github/workflows/snake.yml -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake.svg?v=5">
-  <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake-dark.svg?v=5" width="100%" alt="snake eating the contribution graph">
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake.svg?v=6">
+  <img src="https://raw.githubusercontent.com/Shachin-7/Shachin-7/output/snake-dark.svg?v=6" width="100%" alt="snake eating the contribution graph">
 </picture>
 
 </div>
@@ -110,18 +110,18 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 ## `~/` the numbers
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg?v=5">
-  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg?v=5">
-  <img src="assets/card-stats-dark.svg?v=5" width="480" alt="GitHub statistics">
+  <source media="(prefers-color-scheme: dark)"  srcset="assets/card-stats-dark.svg?v=6">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-stats-light.svg?v=6">
+  <img src="assets/card-stats-dark.svg?v=6" width="480" alt="GitHub statistics">
 </picture>
 
 <br>
 
-<img src="assets/metrics.languages.svg?v=5" height="165" alt="most used languages">
+<img src="assets/metrics.languages.svg?v=6" height="165" alt="most used languages">
 
 <br><br>
 
-<img src="assets/metrics.achievements.svg?v=5" width="90%" alt="achievements">
+<img src="assets/metrics.achievements.svg?v=6" width="90%" alt="achievements">
 
 </div>
 
@@ -136,18 +136,18 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 <td width="50%">
   <a href="https://github.com/Shachin-7/Shachin-portfolio">
     <picture>
-      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Shachin-portfolio-dark.svg?v=5">
-      <source media="(prefers-color-scheme: light)" srcset="assets/card-Shachin-portfolio-light.svg?v=5">
-      <img src="assets/card-Shachin-portfolio-dark.svg?v=5" width="420" alt="Shachin-portfolio">
+      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Shachin-portfolio-dark.svg?v=6">
+      <source media="(prefers-color-scheme: light)" srcset="assets/card-Shachin-portfolio-light.svg?v=6">
+      <img src="assets/card-Shachin-portfolio-dark.svg?v=6" width="420" alt="Shachin-portfolio">
     </picture>
   </a>
 </td>
 <td width="50%">
   <a href="https://github.com/Shachin-7/Satellite_error_github">
     <picture>
-      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Satellite_error_github-dark.svg?v=5">
-      <source media="(prefers-color-scheme: light)" srcset="assets/card-Satellite_error_github-light.svg?v=5">
-      <img src="assets/card-Satellite_error_github-dark.svg?v=5" width="420" alt="Satellite_error_github">
+      <source media="(prefers-color-scheme: dark)"  srcset="assets/card-Satellite_error_github-dark.svg?v=6">
+      <source media="(prefers-color-scheme: light)" srcset="assets/card-Satellite_error_github-light.svg?v=6">
+      <img src="assets/card-Satellite_error_github-dark.svg?v=6" width="420" alt="Satellite_error_github">
     </picture>
   </a>
 </td>
@@ -169,6 +169,13 @@ Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection
 
 <div align="center">
 
-<sub>`01110100 01101000 01100001 01101110 01101011 01100011 00100000 01100110 01101111 01110010 00100000 01110011 01100011 01100011 01101100 01101100 01101001 01101110 01100111`</sub>
+  <br>
+
+  <!-- FOOTER WEBP BANNER -->
+  <img src="assets/footer.webp?v=6" width="100%" alt="Footer Banner" />
+
+  <br><br>
+
+  <sub><code>01110100 01101000 01100001 01101110 01101011 01100011 00100000 01100110 01101111 01110010 00100000 01110011 01100011 01100011 01101100 01101100 01101001 01101110 01100111</code></sub>
 
 </div>
