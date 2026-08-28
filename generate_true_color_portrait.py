@@ -6,25 +6,22 @@ dark_svg_path = "/tmp/shachin-profile/assets/portrait-dark.svg"
 light_svg_path = "/tmp/shachin-profile/assets/portrait-light.svg"
 legacy_svg_path = "/tmp/shachin-profile/assets/portrait.svg"
 
-img = Image.open(input_path).convert("RGBA")
-w, h = img.size
+# Load image preserving RGBA transparency
+img_rgba = Image.open(input_path).convert("RGBA")
+w, h = img_rgba.size
 
-r, g, b, alpha = img.split()
+r, g, b, alpha = img_rgba.split()
 img_rgb = Image.merge("RGB", (r, g, b))
 
-# Grayscale for structure
 gray = img_rgb.convert("L")
 
-# Enhance contrast for sharp facial features
-enhancer = ImageEnhance.Contrast(gray)
-gray_enhanced = enhancer.enhance(1.6)
-
-grid_cols = 80
-cw, ch = img.size
+grid_cols = 75
+cw, ch = img_rgba.size
 grid_rows = int(grid_cols * (ch / cw))
 
-img_small = img_rgb.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
-gray_small = gray_enhanced.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
+img_small_rgba = img_rgba.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
+img_small_rgb = img_rgb.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
+gray_small = gray.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
 alpha_small = alpha.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
 
 spacing = 10
@@ -32,6 +29,7 @@ margin = 20
 width_svg = grid_cols * spacing + margin * 2
 height_svg = grid_rows * spacing + margin * 2
 
+# CSS keyframes animation
 css_lines = [
     "@keyframes rv { from { opacity: 0; transform: scale(0.4); } to { opacity: 1; transform: scale(1); } }",
     ".rw { animation: rv 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; transform-origin: center; }"
@@ -43,7 +41,8 @@ for r_idx in range(grid_rows):
 
 css_str = "<style>" + "".join(css_lines) + "</style>"
 
-# ─── 1. DARK MODE PORTRAIT (portrait-dark.svg) ────────────────────────────────
+# ─── 1. DARK THEME PORTRAIT (portrait-dark.svg) ──────────────────────────────
+# Dark Mode: High grayscale value (bright pixels/face) = LARGE dot
 dark_lines = [
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width_svg} {height_svg}" width="{width_svg}" height="{height_svg}" role="img" aria-label="dot-matrix portrait">',
     css_str,
@@ -53,8 +52,8 @@ dark_lines = [
 for r_idx in range(grid_rows):
     dark_lines.append(f'<g class="rw r{r_idx}">')
     for c_idx in range(grid_cols):
-        a_val = alpha_small.getpixel((c_idx, r_idx))
-        if a_val < 30:
+        a_px = alpha_small.getpixel((c_idx, r_idx))
+        if a_px < 30:
             continue
 
         val = gray_small.getpixel((c_idx, r_idx))
@@ -63,7 +62,7 @@ for r_idx in range(grid_rows):
         cx = c_idx * spacing + spacing / 2
         cy = r_idx * spacing + spacing / 2
 
-        r_px, g_px, b_px = img_small.getpixel((c_idx, r_idx))
+        r_px, g_px, b_px = img_small_rgb.getpixel((c_idx, r_idx))
         hex_color = f"#{r_px:02x}{g_px:02x}{b_px:02x}"
         dark_lines.append(f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="{hex_color}" />')
     dark_lines.append('</g>')
@@ -72,10 +71,9 @@ dark_lines.append('</g>')
 dark_lines.append('</svg>')
 
 
-# ─── 2. HIGH-CONTRAST LIGHT MODE PORTRAIT (portrait-light.svg) ───────────────
-# For Light Mode:
-# 1. Hair, eyes, shadows & dark shirt MUST be solid deep black (#121316 to #1a1c23) with large radius (3.8-4.8) so hair & suit look rich and defined!
-# 2. Skin tones must be rich warm bronze/copper (#b86030 to #d47840) with sharp facial feature definition (eyes, nose, mouth in dark charcoal/brown).
+# ─── 2. LIGHT THEME PORTRAIT (portrait-light.svg) ─────────────────────────────
+# Light Mode: Low grayscale value (dark area e.g. hair/suit) = LARGE dot (intensity = (255 - val) / 255.0)
+# Uses TRUE RGB pixel values without filters/boosters.
 light_lines = [
     f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width_svg} {height_svg}" width="{width_svg}" height="{height_svg}" role="img" aria-label="dot-matrix portrait">',
     css_str,
@@ -85,40 +83,23 @@ light_lines = [
 for r_idx in range(grid_rows):
     light_lines.append(f'<g class="rw r{r_idx}">')
     for c_idx in range(grid_cols):
-        a_val = alpha_small.getpixel((c_idx, r_idx))
-        if a_val < 30:
+        a_px = alpha_small.getpixel((c_idx, r_idx))
+        if a_px < 30:
             continue
 
         val = gray_small.getpixel((c_idx, r_idx))
-        r_px, g_px, b_px = img_small.getpixel((c_idx, r_idx))
+        
+        # REVERSED DOT SIZING MATH FOR LIGHT THEME:
+        # Dark pixels (hair/suit/shadows) -> low val -> high intensity -> LARGE DOT
+        intensity = (255.0 - val) / 255.0
+        radius = round(0.8 + intensity * 3.8, 2)
+
         cx = c_idx * spacing + spacing / 2
         cy = r_idx * spacing + spacing / 2
 
-        # Check if pixel is part of dark features (hair, shirt, eyes, eyebrows)
-        is_dark_feature = (val < 110) or (r_px < 100 and g_px < 100 and b_px < 100)
-
-        if is_dark_feature:
-            # Black hair & shirt: large dense dots + deep rich dark tone
-            darkness = (110 - min(val, 110)) / 110.0
-            radius = round(3.2 + darkness * 1.5, 2)
-            # Ensure hair & suit are rich deep black/charcoal, NOT light gray!
-            hex_color = "#111318" if val < 60 else "#22252c"
-        else:
-            # Skin & face highlights: warm rich copper/bronze tone for high contrast against white
-            radius = round(2.2 + (val / 255.0) * 2.0, 2)
-            
-            # Color grade skin to rich warm amber/copper tone for crisp contrast on light background
-            # Blend natural RGB with warm copper tint
-            cr = int(r_px * 0.75 + 60)
-            cg = int(g_px * 0.55 + 25)
-            cb = int(b_px * 0.40 + 10)
-            
-            # Clamp values
-            cr = min(230, max(140, cr))
-            cg = min(140, max(70, cg))
-            cb = min(90, max(20, cb))
-            
-            hex_color = f"#{cr:02x}{cg:02x}{cb:02x}"
+        # TRUE RGB PIXEL COLORS (No brightness boosters or amber filters)
+        r_px, g_px, b_px = img_small_rgb.getpixel((c_idx, r_idx))
+        hex_color = f"#{r_px:02x}{g_px:02x}{b_px:02x}"
 
         light_lines.append(f'<circle cx="{cx}" cy="{cy}" r="{radius}" fill="{hex_color}" />')
     light_lines.append('</g>')
@@ -126,7 +107,8 @@ for r_idx in range(grid_rows):
 light_lines.append('</g>')
 light_lines.append('</svg>')
 
-# Write outputs
+
+# Save files
 with open(dark_svg_path, "w", encoding="utf-8") as f:
     f.write("\n".join(dark_lines))
 
@@ -145,4 +127,4 @@ with open(os.path.join(pub_dir, "portrait-light.svg"), "w", encoding="utf-8") as
 with open(os.path.join(pub_dir, "sha_matrix.svg"), "w", encoding="utf-8") as f:
     f.write("\n".join(dark_lines))
 
-print("Successfully generated bold, crisp portrait-light.svg and portrait-dark.svg!")
+print("Successfully generated portrait-dark.svg and true-RGB reversed-math portrait-light.svg!")
