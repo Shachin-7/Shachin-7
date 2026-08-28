@@ -48,8 +48,8 @@ THEMES = {
     },
     "light": {
         "grid": "#d0d7de",
-        "spoke": "#e6eaef",
-        "label": "#1f2328",
+        "spoke": "#afb5bb",
+        "label": "#24292f",
         "value": "#57606a",
         "title": "#1f2328",
         "fill": "#2da44e",
