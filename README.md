@@ -20,7 +20,7 @@
 <a href="https://www.linkedin.com/in/shachin-vp-859b26298"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="mailto:shachinvp0506@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 <a href="https://shachin.pro"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
-<a href="https://drive.google.com/file/d/1ry_brnD_3fJJmNwaQxbxhxV0TdmR4Gro/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-FF6B00?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume"></a>
+<a href="https://drive.google.com/file/d/16TtkkOhujlUwUS5WkkJGAR5YmuedBGEz/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-FF6B00?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume"></a>
 <a href="https://github.com/Shachin-7"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
 
 <img src="https://komarev.com/ghpvc/?username=Shachin-7&style=flat&color=39d353&label=profile+views" alt="profile views">
