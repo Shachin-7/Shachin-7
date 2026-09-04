@@ -35,7 +35,7 @@
 $ cat about.txt
 ```
 
-Hi, I'm **Shachin VP**. I build intelligent systems that sit at the intersection of deep learning research, real-time prediction, and high-performance software engineering.
+Hi, I'm **Shachin VP** — an AI engineer and deep learning architect who turns research-grade models into production-ready software. From hybrid LSTM-Transformer pipelines and real-time satellite prediction systems to hackathon-winning platforms, I ship intelligent products that think, learn, and scale.
 
 - 🏆 **5x Hackathon Champion** — 1st Place @ BIT (₹50,000 Cash Prize) + 4 podium finishes across state-level AI hackathons.
 - 🚀 **AI & Deep Learning Architect** — Designing hybrid LSTM + Transformer + GAN models (85%+ accuracy, 35% error drift reduction).
